@@ -1,45 +1,119 @@
 /* Your app's CSS, go crazy, make it your own */
-
-div.scroll-content{
-    background: #3f9dd9;
-}
-.round{
-background: #fff;
-width: 185px;
-height: 185px;
-border-radius: 50%;
-margin: 15% auto;
-position: relative;
-color: #3f9dd9;
-}
-.text-in-round{
-    position: absolute;
-    bottom: 50px;
-    left: 45px;
+/* Header */
+.bar.bar-stable .title {
+    color: #3f9dd9;
     font-size: 22px;
+    line-height: 64px;
+}
+.bar-header {
+    height: 64px;
+}
+.bar.bar-positive .title {
+    font-size: 25px;
+    line-height: 68px;
+}
+
+.bar.bar-positive{
+    background: #3f9dd9;
+    border: none;
+}
+.bar .buttons>.button.backbutton {
+    line-height: 24px;
+    border: none;
+    width: 75px;
+    border-radius: 5px;
+    position: relative;
+    margin-left: 15px;
+    margin-top: 10px;
+    min-height: 45px;
+    background: url('../images/back-recktangle.png') no-repeat;
+    background-size: contain;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-bottom: 5px;
+}
+/*.bar .buttons>.button.backbutton::after {
+    display: block;
+    background-color: #fff;
+    width: 0;
+    height: 0;
+    border-top: 18px solid #3f9dd9;
+    border-right: 16px solid #fff;
+    border-bottom: 18px solid #3f9dd9;
+    position: absolute;
+    left: -13px;
+    border-radius: 1px 0px 0px 0px;
+    top: 0;
+}*/
+.bar .buttons>.button.rightbutton{
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background: #3f9dd9;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    background: url('../images/search-white.png') no-repeat;
+    background-position: 9px 9px;
+    background-size: 55%;
+}
+/* End Header */
+
+/* Login page*/
+#login.content{
+    background: #3f9dd9;
+    margin-top: -40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+#login .round{
+    background: #fff;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    margin: 15% auto;
+    position: relative;
+    color: #3f9dd9;
+}
+#login .text-in-round{
+    position: absolute;
+    bottom: 62px;
+    left: 24px;
+    font-size: 26px;
     font-family: sans-serif;
 }
-.camera-pic{
+#login .camera-pic{
     background: url('../images/camera.png') no-repeat;
-    width: 62px;
-    height: 48px;
+    background-size: contain;
+    width: 44px;
+    height: 34px;
     position: absolute;
-    top: 30px;
+    top: 40px;
     left: 63px;
 }
-.item-input{
+#login .item-input{
     width: 90%;
     margin: 10px auto;
     border-radius: 5px;
     font-size: 25px;
-    background: rgba(255,255,255,0.8);
+    background: rgba(255,255,255,0.3);
+    border: none;
 }
-.item-input input{
-    font-size: 18px;
+#login .item-input input{
+    font-size: 22px;
+    line-height: 26px;
+    color: #fff;
 }
-div.list .button {
+#login .item-input input::-webkit-input-placeholder{
+    color: #fff;
+}
+#login .item-input input::-moz-placeholder{
+    color: #fff;
+}
+#login div.list .button {
     width: 90%;
-    margin: 0 auto;
+    margin: 20px auto;
     border-radius: 5px;
     background: #fff;
     color: #3f9dd9;
@@ -47,6 +121,287 @@ div.list .button {
     font-weight: bold;
     border: none;
 }
-div.list .button:hover{
+#login div.list .button:hover{
     color: #3f9dd9;
 }
+.tw-or-fb{
+    display: block;
+    height: 55px;
+    position: relative;
+    line-height: 53px;
+    width: 90%;
+    margin: 30px auto;
+    color: #fff;
+    font-size: 18px;
+}
+div.tw{
+    display: table-cell;
+    float: left;
+    width: 50%;
+    background: #3f9dd9;
+    border-right: 4px solid #fff;
+    text-align: center;
+    border-radius: 10px 0 0 10px;
+    position: relative;
+    
+}
+span.tw{
+    background: url('../images/twitter-icon.png') no-repeat;
+    padding-left: 35px;
+    background-size: contain;
+    margin-right: 10px;
+}
+div.fb{
+    border-left: 4px solid #fff;
+    float: right;
+    display: table-cell;
+    background: #3468af;
+    width: 50%;
+    text-align: center;
+    border-radius: 0 10px 10px 0;
+}
+span.fb{
+    background: url('../images/fb-icon.png') no-repeat;
+    padding-left: 20px;
+    background-size: contain;
+    margin-left: 10px;
+}
+div.tw::after{
+    content: "or";
+    position: absolute;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    right: -24px;
+    text-align: center;
+    color: #ccc;
+    line-height: 38px;
+    font-style: italic;
+    top: 6px;
+}
+/* End Login page */
+
+/* Login-white page*/
+#login-white.content{
+    background: #fff;
+    margin-top: -40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+#login-white .round{
+    background: #3f9dd9;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    margin: 15% auto;
+    position: relative;
+    color: #fff;
+}
+#login-white .text-in-round{
+    position: absolute;
+    bottom: 62px;
+    left: 28px;
+    font-size: 24px;
+    font-family: sans-serif;
+}
+#login-white .camera-pic{
+    background: url('../images/camera-white.png') no-repeat;
+    background-size: contain;
+    width: 44px;
+    height: 34px;
+    position: absolute;
+    top: 40px;
+    left: 63px;
+}
+#login-white .item-input{
+    width: 90%;
+    margin: 25px auto;
+    font-size: 25px;
+    border: 2px solid #3f9dd9;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+}
+#login-white .item-input input {
+font-size: 20px;
+line-height: 24px;
+color: #3f9dd9;
+}
+#login-white .item-input input[type="text"]{
+    background: url('../images/email-icon-blue.png') no-repeat;
+    background-size: 7%;
+    background-position-y: 12px;
+    padding-left: 45px;
+    margin-left: 10px;
+}
+#login-white .item-input input[type="password"]{
+    background: url('../images/password-icon-blue.png') no-repeat;
+    background-size: 6%;
+    background-position-y: 3px;
+    padding-left: 45px;
+    margin-left: 10px;
+}
+#login-white .item-input input::-webkit-input-placeholder{
+    color: #3f9dd9;
+}
+#login-white .item-input input::-moz-placeholder{
+    color: #3f9dd9;
+}
+#login-white div.list .button {
+    width: 90%;
+    margin: 20px auto;
+    border-radius: 5px;
+    background: #3f9dd9;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+}
+#login-white div.list .button:hover{
+    color: #fff;
+}
+#login-white h4 a{
+    color: #3f9dd9;
+    text-decoration: none;
+}
+#login-white h4{
+    text-align: center;
+}
+#login-white .button {
+    width: 40%;
+    margin: 20px auto;
+    border-radius: 5px;
+    background: #3f9dd9;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+}
+/* End Login-white page*/
+
+/* Profile page*/
+#profile .photo{
+    height: 30%;
+    position: relative;
+    background: bdc3c7;
+}
+#profile .photo-box-absolute > a{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(116, 122, 125, 0.9);
+    border: none;
+}
+#profile .item-avatar {
+    min-height: 80px;
+}
+#profile .item-avatar h2{
+    color: #fff;
+    font-size: 25px;
+    margin-top: 5px;
+}
+#profile .item-avatar p{
+    color: #3f9dd9;
+    font-size: 14px;
+}
+#profile .photo-box-circle{
+    width: 60px;
+    height: 60px;
+    display: block;
+    background: #fff;
+    float: left;
+    margin-left: -55px;
+    border-radius: 100%;
+    margin-right: 20px;
+    background: #3f9dd9;
+    border: 2px solid #fff;
+    position: relative;
+}
+#profile .photo-box-circle-small{
+    height: 20px;
+    width: 20px;
+    background: #3f9dd9;
+    display: block;
+    position: absolute;
+    left: -2px;
+    top: -5px;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    color: #fff;
+    padding-left: 5px;
+    font-size: 15px;
+    line-height: 17px;
+}
+a.item:after{
+    position: absolute;
+    top: 30px;
+    right: 14px;
+    height: 31px;
+    width: 31px;
+    color: #fff;
+    content: "+";
+    font-weight: 400;
+    font-size: 25px;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    text-align: center;
+    padding-left: 3px;
+    padding-bottom: 3px;
+}
+.tabs {
+	position: relative;
+	margin: 0 auto;
+	width: 800px;
+}
+.tabs label {
+	color: #555;
+	cursor: pointer;
+	display: block;
+	float: left;
+	width: 150px;
+	height: 45px;
+	line-height: 45px;
+	position: relative;
+	top: 2px;
+	text-align: center;
+}
+
+.tabs input {
+	position: absolute;
+	left: -9999px;
+}
+
+#tab_1:checked  ~ #tab_l1,
+#tab_2:checked  ~ #tab_l2,
+#tab_3:checked  ~ #tab_l3 {
+	background: #fff;
+	border-color: #fff;
+	top: 0;
+	z-index: 3;
+}
+
+.tabs_cont {
+	background: #fff;
+	position: relative;
+	z-index: 2;
+	height: 230px;
+}
+.tabs_cont > div {
+	position: absolute;
+	left: -9999px;
+	top: 0;
+	opacity: 0;
+	-moz-transition: opacity .5s ease-in-out;
+	-webkit-transition: opacity .5s ease-in-out;
+	transition: opacity .5s ease-in-out;
+}
+#tab_1:checked ~ .tabs_cont #tab_c1,
+#tab_2:checked ~ .tabs_cont #tab_c2,
+#tab_3:checked ~ .tabs_cont #tab_c3 {
+	position: static;
+	left: 0;
+	opacity: 1;
+}
+
+/* End Profile page*/

@@ -1,69 +1,86 @@
-// Ionic Starter App
-
-// angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
-// the 2nd parameter is an array of 'requires'
-// 'starter.services' is found in services.js
-// 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
-
+angular.module('ionicApp', ['ionic'])
 
 .config(function($stateProvider, $urlRouterProvider) {
 
-  // Ionic uses AngularUI Router which uses the concept of states
-  // Learn more here: https://github.com/angular-ui/ui-router
-  // Set up the various states which the app can be in.
-  // Each state's controller can be found in controllers.js
   $stateProvider
-
-    // setup an abstract state for the tabs directive
-    .state('tab', {
-      url: "/tab",
+    .state('eventmenu', {
+      url: "/event",
       abstract: true,
-      templateUrl: "templates/tabs.html"
+      templateUrl: "event-menu.html"
     })
-
-    // the pet tab has its own child nav-view and history
-    .state('tab.pet-index', {
-      url: '/pets',
+    .state('eventmenu.login', {
+      url: "/login",
       views: {
-        'pets-tab': {
-          templateUrl: 'templates/pet-index.html',
-          controller: 'PetIndexCtrl'
+        'menuContent' :{
+          templateUrl: "templates/login.html"
         }
       }
     })
-
-    .state('tab.pet-detail', {
-      url: '/pet/:petId',
+    .state('eventmenu.login-white', {
+      url: "/login-white",
       views: {
-        'pets-tab': {
-          templateUrl: 'templates/pet-detail.html',
-          controller: 'PetDetailCtrl'
+        'menuContent' :{
+          templateUrl: "templates/login-white.html"
         }
       }
     })
-
-    .state('tab.adopt', {
-      url: '/adopt',
+    .state('eventmenu.profile', {
+      url: "/profile",
       views: {
-        'adopt-tab': {
-          templateUrl: 'templates/adopt.html'
+        'menuContent' :{
+          templateUrl: "templates/profile.html"
         }
       }
     })
+  
+  $urlRouterProvider.otherwise("/event/profile");
+})
 
-    .state('tab.about', {
-      url: '/about',
-      views: {
-        'about-tab': {
-          templateUrl: 'templates/about.html'
-        }
-      }
-    });
+.controller('MainCtrl', function($scope, $ionicSideMenuDelegate) {
+  $scope.attendees = [
+    { firstname: 'Nicolas', lastname: 'Cage' },
+    { firstname: 'Jean-Claude', lastname: 'Van Damme' },
+    { firstname: 'Keanu', lastname: 'Reeves' },
+    { firstname: 'Steven', lastname: 'Seagal' }
+  ];
+  
+  $scope.toggleLeft = function() {
+    $ionicSideMenuDelegate.toggleLeft();
+  };
+})
 
-  // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/pets');
+.controller('CheckinCtrl', function($scope) {
+  $scope.showForm = true;
+  
+  $scope.shirtSizes = [
+    { text: 'Large', value: 'L' },
+    { text: 'Medium', value: 'M' },
+    { text: 'Small', value: 'S' }
+  ];
+  
+  $scope.attendee = {};
+  $scope.submit = function() {
+    if(!$scope.attendee.firstname) {
+      alert('Info required');
+      return;
+    }
+    $scope.showForm = false;
+    $scope.attendees.push($scope.attendee);
+  };
+  
+})
 
+.controller('AttendeesCtrl', function($scope) {
+  
+  $scope.activity = [];
+  $scope.arrivedChange = function(attendee) {
+    var msg = attendee.firstname + ' ' + attendee.lastname;
+    msg += (!attendee.arrived ? ' has arrived, ' : ' just left, '); 
+    msg += new Date().getMilliseconds();
+    $scope.activity.push(msg);
+    if($scope.activity.length > 3) {
+      $scope.activity.splice(0, 1);
+    }
+  };
+  
 });
-
