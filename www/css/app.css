@@ -1,4 +1,13 @@
 /* Your app's CSS, go crazy, make it your own */
+span.grey{
+    border-color: #9d9fa1
+}
+span.orange{
+    border-color: #e95b37;
+}
+span.green{
+    border-color: #5dbe71;
+}
 /* Header */
 .bar.bar-stable .title {
     color: #3f9dd9;
@@ -8,6 +17,9 @@
 .bar-header {
     height: 64px;
 }
+.has-header{
+    top: 64px;
+}
 .bar.bar-positive .title {
     font-size: 25px;
     line-height: 68px;
@@ -16,6 +28,12 @@
 .bar.bar-positive{
     background: #3f9dd9;
     border: none;
+}
+.button.side-menu{
+    margin: 10px;
+}
+div.buttons .button.side-menu:before{
+    font-size: 40px;
 }
 .bar .buttons>.button.backbutton {
     line-height: 24px;
@@ -32,19 +50,7 @@
     padding-left: 20px;
     padding-bottom: 5px;
 }
-/*.bar .buttons>.button.backbutton::after {
-    display: block;
-    background-color: #fff;
-    width: 0;
-    height: 0;
-    border-top: 18px solid #3f9dd9;
-    border-right: 16px solid #fff;
-    border-bottom: 18px solid #3f9dd9;
-    position: absolute;
-    left: -13px;
-    border-radius: 1px 0px 0px 0px;
-    top: 0;
-}*/
+
 .bar .buttons>.button.rightbutton{
     width: 40px;
     height: 40px;
@@ -284,17 +290,17 @@ color: #3f9dd9;
 #profile .photo{
     height: 30%;
     position: relative;
-    background: bdc3c7;
+    background: #bdc3c7;
 }
 #profile .photo-box-absolute > a{
     position: absolute;
     bottom: 0;
     width: 100%;
-    background: rgba(116, 122, 125, 0.9);
+    background: rgba(67,73,76, 0.6);
     border: none;
 }
 #profile .item-avatar {
-    min-height: 80px;
+    height: 90px;
 }
 #profile .item-avatar h2{
     color: #fff;
@@ -305,20 +311,20 @@ color: #3f9dd9;
     color: #3f9dd9;
     font-size: 14px;
 }
-#profile .photo-box-circle{
+#profile .photo-box-circle, #lists .photo-box-circle{
     width: 60px;
     height: 60px;
     display: block;
     background: #fff;
     float: left;
-    margin-left: -55px;
+    margin-left: -42px;
     border-radius: 100%;
     margin-right: 20px;
     background: #3f9dd9;
     border: 2px solid #fff;
     position: relative;
 }
-#profile .photo-box-circle-small{
+#profile .photo-box-circle-small-top-left, #lists .photo-box-circle-small-top-left{
     height: 20px;
     width: 20px;
     background: #3f9dd9;
@@ -333,75 +339,398 @@ color: #3f9dd9;
     font-size: 15px;
     line-height: 17px;
 }
-a.item:after{
+#profile .photo-box-absolute a.item:after{
     position: absolute;
     top: 30px;
     right: 14px;
     height: 31px;
     width: 31px;
     color: #fff;
-    content: "+";
-    font-weight: 400;
-    font-size: 25px;
+    content: "\f1ca";
+    font-size: 35px;
+}
+#profile .list>label{
+    border-radius: 10px;
+}
+#profile div.list span.developer{
+    background: url('../images/dev-icon.png') no-repeat;
+    background-size: contain;
+    padding-left: 25px;
+    font-size: 14px;
+    color: #9d9fa1;
+}
+#profile div.list span.home{
+    margin-left: 30px;
+    background: url('../images/home-icon.png') no-repeat;
+    background-size: contain;
+    padding-left: 25px;
+    font-size: 14px;
+    color: #9d9fa1;
+}
+#profile div.list span.designer{
+    background: url('../images/designer-icon.png') no-repeat;
+    background-size: contain;
+    padding-left: 25px;
+    font-size: 14px;
+    color: #9d9fa1;
+}
+#profile div.list span.student{
+    background: url('../images/cap-icon.png') no-repeat;
+    background-size: contain;
+    padding-left: 25px;
+    font-size: 14px;
+    color: #9d9fa1;
+}
+#profile div.list a.item:after{
+    content: "\f154";
+    color: #3f9dd9;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #3f9dd9;
+    border-radius: 100%;
+    padding-left: 10px;
+    padding-top: 2px;
+    font-size: 22px;
+    font-weight: bold;
+    top: 35%;
+} 
+#profile div.list h2{
+    font-size: 24px;
+    color: #3f9dd9;
+}
+#profile .photo-box-circle-small-bottom-right, #lists .photo-box-circle-small-bottom-right{
+    height: 22px;
+    width: 22px;
+    background: #3f9dd9;
+    display: block;
+    position: absolute;
+    right: -2px;
+    bottom: -5px;
     border: 2px solid #fff;
     border-radius: 100%;
+    color: #fff;
+    padding-left: 5px;
+    font-size: 15px;
+    line-height: 17px;
+}
+#profile .photo-box-circle-small-bottom-right span, #lists .photo-box-circle-small-bottom-right span{
+    height: 18px;
+    width: 18px;
+    background: #fff;
+    position: relative;
+    left: -5px;
+    top: 0px;
+    display: block;
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 100%;
+    margin-right: 23px;
+    box-sizing: border-box;
+}
+#profile div.list a.item .photo-box-circle, #lists div.list a.item .photo-box-circle{
+    margin-left: -80px;
+}
+#profile label.item{
+    margin-top: 80px;
+    width: 90%;
+    margin: 80px auto 0;
+    border-radius: 8px;
+}
+#profile div.list a.item {
+    padding-bottom: 3%;
+    padding-top: 3%;
+    min-height: 80px;
+    margin: 0 -1px;
+    border-top: none;
+}
+#profile div.list .options, #lists div.list .options{
+    width: 100%;
+    float: left;
+}
+#profile div.list .options li, #lists div.list .options li{
+    display: inline-block;
+    width: 25%;
+    height: 80px;
+    margin: 0 -3px -5px -3px;
+    position: relative;
+}
+#profile div.list .options ul, #lists div.list .options ul{
+    background: #43494c;
+    width: 103%;
+}
+#profile div.list .options li.tel, #lists div.list .options li.tel{
+    background: url('../images/telephone.png') no-repeat;
+    background-position: center;
+}
+#profile div.list .options li.chat, #lists div.list .options li.chat{
+    background: url('../images/chat-icon-1.png') no-repeat;
+    background-position: center;
+    border-right: 1px solid #565c5e;
+    border-left: 1px solid #565c5e;
+}
+#profile div.list .options li.email, #lists div.list .options li.email{
+    background: url('../images/email-fly-icon.png') no-repeat;
+    background-position: center;
+}
+#profile div.list .options-circle, #lists div.list .options-circle{
+    background: #3f9dd9;
+    height: 82px;
+}
+#profile div.list .options-circle span.photo-box-circle, #lists div.list .options-circle span.photo-box-circle{
+    margin: 10px 0 0 25%;
+}
+#profile div.list .options li.options-circle:after{
+    content: "";
+    width: 0;
+    height: 0;
+    border-right: 10px solid #3f9dd9;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    top: 31px;
+    left: -10px;
+}
+.tabss input[type=radio] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+.tabss {
+    list-style: none;
+    position: relative;
+    padding: 0;
+}
+.tabss li{
+    float: left;
+    width: 25%;
+}
+.tabss label {
+    display: block;
+    padding: 20px 0px;
+    font-size: 18px;
+    color: #9d9fa1;
     text-align: center;
-    padding-left: 3px;
-    padding-bottom: 3px;
-}
-.tabs {
-	position: relative;
-	margin: 0 auto;
-	width: 800px;
-}
-.tabs label {
-	color: #555;
-	cursor: pointer;
-	display: block;
-	float: left;
-	width: 150px;
-	height: 45px;
-	line-height: 45px;
-	position: relative;
-	top: 2px;
-	text-align: center;
+    font-weight: normal;
+    background: rgba(67,73,76, 0.1);
+    cursor: pointer;
+    position: relative;
+    top: 3px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
-.tabs input {
-	position: absolute;
-	left: -9999px;
+[id^=tab]:checked + label {
+    background: #fff;
+    color: #3f9dd9;
+    top: 0;
+    padding-bottom: 1px
 }
 
-#tab_1:checked  ~ #tab_l1,
-#tab_2:checked  ~ #tab_l2,
-#tab_3:checked  ~ #tab_l3 {
-	background: #fff;
-	border-color: #fff;
-	top: 0;
-	z-index: 3;
+/*[id^=tab]:checked ~ [id^=tab-content] {
+    display: block;
+}*/
+.tab-content{
+    z-index: 2;
+    display: none;
+    text-align: left;
+    width: 100%;
+    font-size: 20px;
+    line-height: 140%;
+    padding-top: 10px;
+    background: #08C;
+    padding: 15px;
+    color: white;
+    position: absolute;
+    top: 53px;
+    left: 0;
+    box-sizing: border-box;
+    -webkit-animation-duration: 0.5s;
+    -o-animation-duration: 0.5s;
+    -moz-animation-duration: 0.5s;
+    animation-duration: 0.5s;
 }
-
-.tabs_cont {
-	background: #fff;
-	position: relative;
-	z-index: 2;
-	height: 230px;
-}
-.tabs_cont > div {
-	position: absolute;
-	left: -9999px;
-	top: 0;
-	opacity: 0;
-	-moz-transition: opacity .5s ease-in-out;
-	-webkit-transition: opacity .5s ease-in-out;
-	transition: opacity .5s ease-in-out;
-}
-#tab_1:checked ~ .tabs_cont #tab_c1,
-#tab_2:checked ~ .tabs_cont #tab_c2,
-#tab_3:checked ~ .tabs_cont #tab_c3 {
-	position: static;
-	left: 0;
-	opacity: 1;
-}
-
 /* End Profile page*/
+
+/* Profile-1 page*/
+#profile-1 .photo{
+    height: 35%;
+    position: relative;
+    background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0.6, #777A75),
+	color-stop(1, #070A05)
+    );
+    background-image: -o-linear-gradient(bottom, #777A75 60%, #070A05 100%);
+    background-image: -moz-linear-gradient(bottom, #777A75 60%, #070A05 100%);
+    background-image: -webkit-linear-gradient(bottom, #777A75 60%, #070A05 100%);
+    background-image: -ms-linear-gradient(bottom, #777A75 60%, #070A05 100%);
+    background-image: linear-gradient(to bottom, #777A75 60%, #070A05 100%);
+}
+#profile-1 .photo-box-absolute > a{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #fff;
+    padding-left: 30px;
+}
+#profile-1 div.button-list li, #profile-1 div.follow-list li{
+    height: 80px;
+    width: 25%;
+    display: inline-block;
+    float: left;
+    font-size: 60px;
+    text-align: center;
+    color: #7e838a;
+}
+#profile-1 div.button-list li i {
+    margin-top: 15px;
+}
+#profile-1 .item-avatar {
+    height: 90px;
+}
+#profile-1 a.item:after{
+    content: "";
+}
+#profile-1 .item-avatar h2{
+    color: #fff;
+    font-size: 25px;
+    margin-top: 5px;
+}
+#profile-1 .item-avatar p{
+    color: #fff;
+    font-size: 18px;
+    float: left;
+}
+#profile-1 .item-avatar p.marker{
+    float: right;
+    margin-top: -7px;
+}
+#profile-1 .item-avatar p > i{
+    font-size: 28px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#profile-1 div.follow-list li.follow{
+    font-size: 24px;
+    width: 33%;
+    padding-top: 15px;
+    border: 1px solid #eff1f2;
+}
+#profile-1 div.follow-list li.follow span.up{
+    font-size: 18px;
+    color: #000;
+    line-height: 30px;
+}
+#profile-1 .list li.item{
+    font-size: 22px;
+    color: #000;
+    line-height: 30px;
+    padding: 25px;
+}
+#profile-1 .list li.item span.down{
+    font-size: 16px;
+    color: #9d9fa1;
+    line-height: 15px;
+}
+#profile-1 div.footer .follow-button{
+    float: left;
+    width: 50%;
+    height: 75px;
+}
+#profile-1 div.footer .follow-button button{
+    font-size: 24px;
+    padding: 12px 20px;
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 4px;
+    margin-left: 20px;
+}
+#profile-1 div.footer .socials{
+    float: right;
+    font-size: 28px;
+}
+#profile-1 div.footer .socials i{
+    border: 2px solid #000;
+    border-radius: 100%;
+    padding: 15px;
+}
+#profile-1 div.footer{
+    margin-top: 30px;
+}
+/* End Profile-1 page */
+
+/* Settings page */
+#settings div.list a.item:after{
+    content: "\f154";
+    font-size: 35px;
+    color: #3f9dd9;
+}
+#settings .item-toggle .toggle{
+    top: 18px;
+}
+#settings div.list a.item.add-account:after{
+    content: "\f216";
+}
+#settings .item{
+    font-size: 22px;
+    padding: 25px;
+}
+#settings div.item{
+    font-size: 18px;
+    color: #3f9dd9;
+    padding: 10px 25px;
+}
+#settings .button {
+    width: 90%;
+    margin: 50px auto 10px;
+    border-radius: 8px;
+    background: #3f9dd9;
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    border: none;
+    padding: 12px 0;
+}
+#settings .button.cancel{
+    background: #fff;
+    color: #3f9dd9;
+    border: 2px solid #3f9dd9;
+    margin: 10px auto;
+}
+#settings div.item span{
+    font-size: 22px;
+    padding: 15px 0;
+    color: #000;
+}
+#settings .range input{
+    margin-left: 60px;
+}
+/* End Settings page */
+
+/* Lists page */
+#lists div.list .options li.check{
+    background: url('../images/apply-icon.png') no-repeat;
+    background-position: center;
+}
+#lists div.list .options li.message{
+    background: url('../images/chat-icon.png') no-repeat;
+    background-position: center;
+}
+#lists div.list .options li.close{
+    background: url('../images/x-icon.png') no-repeat;
+    background-position: center;
+}
+#lists div.list .options ul{
+    background: #3f9dd9;
+}
+#lists div.list .options-circle{
+    background: #fff;
+}
+/* End Lists page */

@@ -1,0 +1,61 @@
+<ion-header-bar align-title="center" class="bar-positive">
+  <div class="buttons">
+      <button class="button button-icon icon ion-navicon side-menu"></button>
+  </div>
+  <h1 class="title">Settings</h1>
+  <div class="buttons">
+      <button class="button rightbutton"></button>
+  </div>
+</ion-header-bar>
+
+<ion-view>
+    <ion-content has-header="true">
+        <div id="settings" class="content">
+            <div class="item">
+                Some Heading here
+            </div>
+            <ul class="list">
+
+                <li class="item item-toggle">
+                    Link with Facebook
+                    <label class="toggle toggle-positive">
+                        <input type="checkbox" checked>
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+                <li class="item item-toggle">
+                    Link with Twitter
+                    <label class="toggle toggle-positive">
+                        <input type="checkbox">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+                <div class="list">
+                    <a class="item" href="#">
+                        Lorem Ipsum Dolor
+                    </a>
+                    <a class="item" href="#">
+                        Sit Amet Metta
+                    </a>
+                    <div class="item">
+                        Some Heading here
+                    </div>
+                    <a class="item add-account" href="#">
+                        Add account
+                    </a>
+                    <div class="item range range-positive">
+                        <span>Settings</span>
+                        <input type="range" name="volume" min="0" max="100" value="33">
+                    </div>
+                </div>
+
+            </ul>
+            <button class="button button-block button-positive">Save</button> 
+            <button class="button button-block button-positive cancel">Cancel</button> 
+        </div>
+    </ion-content>
+</ion-view>
