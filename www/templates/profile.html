@@ -1,107 +1,163 @@
-<ion-header-bar align-title="center" class="bar-positive">
-  <div class="buttons">
-      <button class="button backbutton" ng-click="doSomething()">Back</button>
-  </div>
-  <h1 class="title">Friends</h1>
-  <div class="buttons">
-      <button class="button rightbutton"></button>
-  </div>
-</ion-header-bar>
+<ion-side-menus>
+    <ion-side-menu-content>
 
-<ion-view>
-    <ion-content has-header="true">
-        <div id="profile" class="content">
-            <div class="photo">
-                <div class="photo-box-absolute">
-                    <a class="item item-avatar" href="#">
-                        <span class="photo-box-circle"><span class="photo-box-circle-small-top-left">3</span></span>
-                        <h2>Someonews Name<i class="icon ion-ios7-arrow-down" style="padding: 4px 0 0 5px"></i></h2>
-                        <p>@johnathonrockfish</p>
-                    </a>
-                </div>
+
+
+        <ion-header-bar align-title="center" class="bar-positive">
+            <div class="buttons">
+                <button class="button backbutton" ng-click="toggleLeft()">Back</button>
             </div>
-            <ul class="tabss">
-                <li>
-                    <input type="radio" checked name="tabs" id="tab1">
-                    <label for="tab1">All</label>
-                    <div id="tab-content1" class="tab-content animated fadeIn">
-                        tab-content1
+            <h1 class="title">Friends</h1>
+            <div class="buttons">
+                <button class="button rightbutton"><i class="icon ion-ios7-search"></i></button>
+            </div>
+        </ion-header-bar>
+
+        <ion-view>
+            <ion-content has-header="true">
+                <div id="profile" class="content">
+                    <div class="photo">
+                        <div class="photo-box-absolute">
+                            <a class="item item-avatar" href="#">
+                                <span class="photo-box-circle"><span class="photo-box-circle-small-top-left">3</span></span>
+                                <h2>Someonews Name<i class="icon ion-ios7-arrow-down" style="padding: 4px 0 0 5px"></i></h2>
+                                <p>@johnathonrockfish</p>
+                            </a>
+                        </div>
                     </div>
-                </li>
-                <li>
-                    <input type="radio" name="tabs" id="tab2" checked="checked">
-                    <label for="tab2">Friends</label>
-                    <div id="tab-content2" class="tab-content animated fadeIn">
-                        tab-content2
-                    </div>
-                </li>
-                <li>
-                    <input type="radio" name="tabs" id="tab3">
-                    <label for="tab3">Family</label>
-                    <div id="tab-content3" class="tab-content animated fadeIn">
-                        tab-content3
-                    </div>
-                </li>
-                <li>
-                    <input type="radio" name="tabs" id="tab4">
-                    <label for="tab4">Coworkers</label>
-                    <div id="tab-content4" class="tab-content animated fadeIn">
-                        tab-content4
-                    </div>
-                </li>
-            </ul>
-                <label class="item item-input">
-                    <i class="icon ion-search placeholder-icon"></i>
-                    <input type="text" placeholder="Find friends">
-                </label>
-            <div class="list">
-                <a class="item item-thumbnail-left" href="#">
-                    <span class="photo-box-circle">
-                        <span class="photo-box-circle-small-bottom-right">
-                            <span class="orange"></span>
-                        </span>
-                    </span>
-                    <h2>Fredrick Luckily</h2>
-                    <span class="developer">Developer</span>
-                    <span class="home">New York, USA</span>
-                </a>
-                <a class="item item-thumbnail-left" href="#">
-                    <span class="photo-box-circle">
-                        <span class="photo-box-circle-small-bottom-right">
-                            <span class="grey"></span>
-                        </span>
-                        <span class="photo-box-circle-small-top-left">2</span>
-                    </span>
-                    <h2>Fredrick Luckily</h2>
-                    <span class="designer">Designer</span>
-                    <span class="home">London, United Kingdom</span>
-                </a>
-                <div class="options">
-                    <ul>
-                        <li class="tel"></li>
-                        <li class="chat"></li>
-                        <li class="email"></li>
-                        <li class="options-circle">
+                    <ul class="tabss">
+                        <li>
+                            <input type="radio" checked name="tabs" id="tab1">
+                            <label for="tab1">All</label>
+                            <div id="tab-content1" class="tab-content animated fadeIn">
+                                tab-content1
+                            </div>
+                        </li>
+                        <li>
+                            <input type="radio" name="tabs" id="tab2" checked="checked">
+                            <label for="tab2">Friends</label>
+                            <div id="tab-content2" class="tab-content animated fadeIn">
+                                tab-content2
+                            </div>
+                        </li>
+                        <li>
+                            <input type="radio" name="tabs" id="tab3">
+                            <label for="tab3">Family</label>
+                            <div id="tab-content3" class="tab-content animated fadeIn">
+                                tab-content3
+                            </div>
+                        </li>
+                        <li>
+                            <input type="radio" name="tabs" id="tab4">
+                            <label for="tab4">Coworkers</label>
+                            <div id="tab-content4" class="tab-content animated fadeIn">
+                                tab-content4
+                            </div>
+                        </li>
+                    </ul>
+                    <label class="item item-input">
+                        <i class="icon ion-search placeholder-icon"></i>
+                        <input type="text" placeholder="Find friends">
+                    </label>
+                    <div class="list">
+                        <a class="item item-thumbnail-left" href="#">
+                            <span class="photo-box-circle">
+                                <span class="photo-box-circle-small-bottom-right">
+                                    <span class="orange"></span>
+                                </span>
+                            </span>
+                            <h2>Fredrick Luckily</h2>
+                            <span class="developer">Developer</span>
+                            <span class="home">New York, USA</span>
+                        </a>
+                        <a class="item item-thumbnail-left" href="#">
+                            <span class="photo-box-circle">
+                                <span class="photo-box-circle-small-bottom-right">
+                                    <span class="grey"></span>
+                                </span>
+                                <span class="photo-box-circle-small-top-left">2</span>
+                            </span>
+                            <h2>Fredrick Luckily</h2>
+                            <span class="designer">Designer</span>
+                            <span class="home">London, United Kingdom</span>
+                        </a>
+                        <div class="options">
+                            <ul>
+                                <li class="tel"></li>
+                                <li class="chat"></li>
+                                <li class="email"></li>
+                                <li class="options-circle">
+                                    <span class="photo-box-circle">
+                                        <span class="photo-box-circle-small-bottom-right">
+                                            <span class="green"></span>
+                                        </span>
+                                    </span> 
+                                </li>
+                            </ul>
+                        </div>
+                        <a class="item item-thumbnail-left" href="#">
                             <span class="photo-box-circle">
                                 <span class="photo-box-circle-small-bottom-right">
                                     <span class="green"></span>
                                 </span>
-                            </span> 
-                        </li>
-                    </ul>
-                </div>
-                <a class="item item-thumbnail-left" href="#">
-                    <span class="photo-box-circle">
-                        <span class="photo-box-circle-small-bottom-right">
-                            <span class="green"></span>
-                        </span>
-                    </span>
-                    <h2>Fredrick Luckily</h2>
-                    <span class="student">Student</span>
-                    <span class="home">New Orleans, LA</span>
-                </a>
+                            </span>
+                            <h2>Fredrick Luckily</h2>
+                            <span class="student">Student</span>
+                            <span class="home">New Orleans, LA</span>
+                        </a>
 
-            </div>
-        </div>
-    </ion-content>
-</ion-view>
+                    </div>
+                </div>
+            </ion-content>
+        </ion-view>
+        </ion-side-menu-content> 
+        <ion-side-menu side="left">
+            <ion-header-bar class="bar-light">
+                <label class="item item-input" style="width: 95%; height: 50px; margin: 0 auto;">
+                        <i class="icon ion-search placeholder-icon"></i>
+                        <input type="text" placeholder="Search" style="line-height: 20px;font-size: 18px;">
+                    </label>
+            </ion-header-bar>
+            <ion-content class="side-menu">
+                <div class="list" id="side-menu">
+                    <a class="item item-icon-left" href="#">
+                        <i class="icon ion-record" style="color: #3f9dd9"></i>
+                        Profile
+                    </a>
+                    <a class="item item-icon-left item-icon-right" href="#">
+                        <i class="icon ion-arrow-graph-up-right"></i>
+                        Notifications
+                        <span class="badge badge-positive">0</span>
+                    </a>
+                    <a class="item item-icon-left" href="#">
+                        <i class="icon ion-ios7-cloud-upload-outline"></i>
+                        Upload New
+                    </a>
+                    <a class="item item-icon-left active" href="#">
+                        <i class="icon ion-image"></i>
+                        Photos
+                    </a>
+                    <a class="item item-icon-left" href="#">
+                        <i class="icon ion-eye"></i>
+                        Explore
+                    </a>
+                    <a class="item item-icon-left" href="#">
+                        <i class="icon ion-person-stalker"></i>
+                        Designers
+                    </a>
+                    <a class="item item-icon-left" href="#">
+                        <i class="icon ion-ios7-calendar-outline"></i>
+                        Calendar
+                    </a>
+                    <a class="item item-icon-left" href="#">
+                        <i class="icon ion-ios7-heart-outline"></i>
+                        Favorites
+                    </a>
+                    <a class="item item-icon-left" href="#" style="margin: 20px 0">
+                        <i class="icon ion-log-out"></i>
+                        Sign Out
+                    </a>
+                </div>
+            </ion-content>
+        </ion-side-menu>
+</ion-side-menus>

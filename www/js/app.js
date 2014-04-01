@@ -28,7 +28,8 @@ angular.module('ionicApp', ['ionic'])
       url: "/profile",
       views: {
         'menuContent' :{
-          templateUrl: "templates/profile.html"
+          templateUrl: "templates/profile.html",
+          controller: "MainCtrl"
         }
       }
     })
@@ -56,6 +57,39 @@ angular.module('ionicApp', ['ionic'])
         }
       }
     })
+    .state('eventmenu.tags', {
+      url: "/tags",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/tags.html"
+        }
+      }
+    })
+    .state('eventmenu.collections', {
+      url: "/collections",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/collections.html"
+        }
+      }
+    })
+    .state('eventmenu.community', {
+      url: "/community",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/community.html",
+          controller: "AppCtrl"
+        }
+      }
+    })
+    .state('eventmenu.chat', {
+      url: "/chat",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/chat.html"
+        }
+      }
+    })
   
   $urlRouterProvider.otherwise("/event/profile");
 })
@@ -66,4 +100,27 @@ angular.module('ionicApp', ['ionic'])
     $ionicSideMenuDelegate.toggleLeft();
   };
 })
+
+.controller('AppCtrl', function($scope, $ionicModal) {
+  $scope.contacts = [
+    { name: 'Gordon Freeman' },
+    { name: 'Barney Calhoun' },
+    { name: 'Lamarr the Headcrab' },
+  ];
+  $ionicModal.fromTemplateUrl('templates/modal.html', function(modal) {
+    $scope.modal = modal;
+  }, {
+    animation: 'slide-in-up',
+    focusFirstInput: true
+  });
+})
+
+.controller('ModalCtrl', function($scope) {
+  $scope.newUser = {}; 
+  $scope.createContact = function() {
+    console.log('Create Contact', $scope.newUser);
+    $scope.modal.hide();
+  };
+  
+});
 

@@ -8,6 +8,36 @@ span.orange{
 span.green{
     border-color: #5dbe71;
 }
+.bg-grey{
+    background: #bdc3c7;
+}
+.bg-light-grey{
+    background: #f1f1f1;
+}
+.bg-blue{
+    background: #3f9dd9 !important;
+}
+.bg-aqua{
+    background: #3fc9d9 !important;
+}
+.bg-light-green{
+    background: #5ec7a1 !important;
+}
+.bg-green{
+    background: #5dbe71 !important;
+}
+.bg-lime{
+    background: #9fd55c !important;
+}
+.bg-yellow-green{
+    background: #bbe148 !important;
+}
+.bg-yellow{
+    background: #e5e14b !important;
+}
+.bg-brown{
+    background: #e5ae4d !important;
+}
 /* Header */
 .bar.bar-stable .title {
     color: #3f9dd9;
@@ -60,9 +90,18 @@ div.buttons .button.side-menu:before{
     margin-right: 10px;
     border: 2px solid #fff;
     box-sizing: border-box;
-    background: url('../images/search-white.png') no-repeat;
-    background-position: 9px 9px;
-    background-size: 55%;
+    text-align: center;
+    padding: 0;
+}
+.bar .button.rightbutton i.ion-ios7-plus-empty:before{
+    font-size: 40px;
+}
+.bar .button.rightbutton i.ion-ios7-search:before{
+    font-size: 30px;
+}
+.bar .button.rightbutton.edit-button{
+    width: 55px;
+    font-size: 18px;
 }
 /* End Header */
 
@@ -645,8 +684,8 @@ color: #3f9dd9;
     height: 75px;
 }
 #profile-1 div.footer .follow-button button{
-    font-size: 24px;
-    padding: 12px 20px;
+    font-size: 1.6em;
+    padding: 10px 7%;
     background: #fff;
     border: 2px solid #000;
     border-radius: 4px;
@@ -655,11 +694,15 @@ color: #3f9dd9;
 #profile-1 div.footer .socials{
     float: right;
     font-size: 28px;
+    max-width: 50%;
 }
 #profile-1 div.footer .socials i{
     border: 2px solid #000;
     border-radius: 100%;
-    padding: 15px;
+    min-height: 50px;
+    min-width: 50px;
+    text-align: center;
+    padding-top: 6%;
 }
 #profile-1 div.footer{
     margin-top: 30px;
@@ -734,3 +777,285 @@ color: #3f9dd9;
     background: #fff;
 }
 /* End Lists page */
+
+/* Tags page */
+#tags .item input{
+    font-size: 26px;
+    line-height: 28px;
+    padding: 30px 15px;
+}
+#tags h3{
+    color: #c0c6cc;
+    padding: 5px 15px;
+    font-size: 20px;
+}
+#tags h3 i{
+    float: right;
+    font-size: 36px;
+    line-height: 20px;
+}
+#tags .button.button-block{
+    position: relative;
+    width: 95%;
+    margin: 10px auto;
+    min-height: 60px;
+    text-align: left;
+    border: none;
+}
+#tags .button i.icon{
+    float: right;
+}
+/* End Tags page*/
+
+/*Collections page*/
+.bottom-none{
+    bottom: 0;
+}
+#collections .content{
+    height: 100%;
+}
+.collections-footer{
+    background: rgba(67,73,76, 0.7);
+    border: none;
+}
+.collections-footer h1{
+    color: #fff;
+}
+.collections-footer h1 i{
+    font-size: 20px;
+    padding: 0 10px;
+}
+#collections .left-col{
+    float: left;
+    max-width: 50%;
+}
+#collections .right-col{
+    margin-left: 50%;
+    position: relative;
+    top: 100px;
+}
+#collections .collection-item .img-block{
+    min-height: 150px;
+}
+#collections .collection-item .bottom-block{
+    min-height: 50px;
+    font-size: 16px;
+    background: rgba(67,73,76, 0.7);
+    color: #fff;
+    padding: 15px;
+}
+
+/*End Collections page*/
+
+/* Community page */
+.bar.community-bar{
+    top: 64px;
+    background: #3f9dd9;
+    border: none;
+    height: 54px;
+}
+.bar.community-bar .button-bar{
+    color: #fff;
+    height: 100%;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    
+}
+.bar.community-bar .button-bar .button{
+    background: transparent;
+    border: 1px solid #fff;
+    font-size: 20px;
+    line-height: 36px;
+    color: #fff;
+}
+.bar.community-bar .button-bar .button.active{
+    background: #fff;
+    border: none;
+    box-shadow: none;
+    color: #3f9dd9;
+}
+#community .left-col{
+    float: left;
+    width: 50%;
+}
+#community .right-col{
+    margin-left: 50%;
+    position: relative;
+    top: 100px;
+}
+#community .collection-item{
+    background: #fff;
+    margin: 10px 3px;
+    border-bottom: 2px solid #c1c1c1;
+}
+#community .collection-item .img-block{
+    min-height: 150px;
+    background: #ccc;
+}
+#community .collection-item .bottom-block{
+    max-height: 85px;
+    font-size: 16px;
+    padding: 10px;
+}
+#community .collection-item .bottom-block h4{
+    color: #858c94;
+    padding: 0;
+    margin: 0;
+}
+#community .collection-item .bottom-block h5 a, #community .collection-item .bottom-block h5{
+    color: #3f9dd9;
+    padding: 0;
+    margin: 2px 0 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+#community .collection-item .bottom-block span{
+    color: #858c94;
+    margin-top: 3px;
+}
+#community .collection-item .bottom-block span.comments{
+    margin-left: 5px;
+}
+/* End Community page */
+
+/* Chat page */
+#chat .message{
+    display: block;
+    max-width: 75%;
+    font-size: 16px;
+}
+#chat .message.left{
+    float: left;
+    position: relative;
+    background: rgb(234,235,236);
+    border-radius: 25px;
+    color: #6f7881;
+    margin: 15px 0 15px 25px;
+    padding: 10px;
+}
+#chat .message.left:before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: -10px;
+    left: -20px;
+    height: 20px;
+    border-right: 40px solid #EAEBEC;
+    background: rgb(234,235,236);
+    -webkit-border-bottom-right-radius: 80px 50px;
+    -moz-border-radius-bottomright: 80px 50px;
+    border-bottom-right-radius: 80px 50px;
+    -webkit-transform: translate(0, -2px);
+    -moz-transform: translate(0, -2px);
+    -ms-transform: translate(0, -2px);
+    -o-transform: translate(0, -2px);
+    transform: translate(0, -2px);
+}
+#chat .message.left:after{
+    content: "\00a0";
+    position: absolute;
+    z-index: -1;
+    bottom: -10px;
+    left: -25px;
+    width: 60px;
+    height: 20px;
+    background: #fff;
+    -moz-border-radius-bottomright: 40px 50px;
+    -webkit-border-bottom-right-radius: 40px 50px;
+    border-bottom-right-radius: 40px 50px;
+    -moz-transform: translate(-30px, -2px);
+    -webkit-transform: translate(-30px, -2px);
+    -o-transform: translate(-30px, -2px);
+    transform: translate(-30px, -2px);
+}
+#chat .message.right{
+    float: right;
+    position: relative;
+    background: #3f9dd9;
+    border-radius: 25px;
+    color: #fff;
+    margin: 15px 25px 15px 0px;;
+    padding: 10px;
+}
+#chat .message.right:before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: -9px;
+    right: -25px;
+    height: 20px;
+    border-left: 40px solid #3f9dd9;
+    background: #3f9dd9;
+    -webkit-border-bottom-right-radius: 80px 50px;
+    -moz-border-radius-bottomright: 80px 50px;
+    border-bottom-left-radius: 80px 50px;
+    -webkit-transform: translate(0, -2px);
+    -moz-transform: translate(0, -2px);
+    -ms-transform: translate(0, -2px);
+    -o-transform: translate(0, -2px);
+    transform: translate(0, -2px);
+}
+#chat .message.right:after{
+    content: "\00a0";
+    position: absolute;
+    z-index: -1;
+    bottom: -9px;
+    right: -86px;
+    width: 60px;
+    height: 20px;
+    background: #fff;
+    -moz-border-radius-bottomright: 40px 50px;
+    -webkit-border-bottom-right-radius: 40px 50px;
+    border-bottom-left-radius: 40px 50px;
+    -moz-transform: translate(-30px, -2px);
+    -webkit-transform: translate(-30px, -2px);
+    -o-transform: translate(-30px, -2px);
+    transform: translate(-30px, -2px);
+}
+.chat-footer{
+    border: 1px solid #ccc;
+    width: 102%;
+    background: rgba(234,235,236,0.5)
+}
+.item.imessage{
+    width: 102%;
+    border: none;
+    background: transparent;
+}
+.imessage i{
+    font-size: 30px;
+    margin: 0 15px 0 0;
+    color: #ccc;
+}
+.imessage label{
+    background: #fff;
+    border: 1px solid #ccc;
+}
+.imessage .button{
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ccc;
+}
+/* End Chat page */
+#side-menu a.item:after{
+    content: "";
+}
+.side-menu{
+    background: #c1c1c1;
+}
+.item-complex.active .item-content, .item.active:not(.item-divider):not(.item-input):not(.item-input-inset) {
+    background-color: #3f9dd9;
+    color: white;
+    border-color: transparent;
+}
+
+.top-slide-menu{
+    position: relative;
+    top: -100px;
+}
+.top-slide-menu-open{
+    position: relative;
+    top: 0px;
+}
