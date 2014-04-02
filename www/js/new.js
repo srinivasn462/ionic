@@ -1,19 +1,29 @@
+(function(){
+    
+    window.onload = function() {
+
+
         console.log("dsadas")
-        var 	menuTop = document.getElementById( 'top-menu' ),
-        showTop = document.getElementById( 'showTop' ),
-        body = document.body;
+        var menuTop = document.getElementById('top-menu'),
+            showTop = document.getElementById('showTop'),
+                body = document.body;
         console.log("menuTop")
+        console.log(menuTop)
 
         showTop.onclick = function() {
-        console.log("onclick")
-        classie.toggle( this, 'active' );
-        classie.toggle( menuTop, 'top-slide-menu-open' );
-        disableOther( 'showTop' );
+            console.log("onclick")
+            classie.toggle(this, 'active');
+            classie.toggle(menuTop, 'top-slide-menu-open');
+            disableOther('showTop');
         };
-        function disableOther( button ) {
+        function disableOther(button) {
 
-        if( button !== 'showTop' ) {
-        classie.toggle( showTop, 'disabled' );
-        }				
+            if (button !== 'showTop') {
+                classie.toggle(showTop, 'disabled');
+            }
         }
+    
+    }
+
+}());
 

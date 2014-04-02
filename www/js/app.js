@@ -90,6 +90,14 @@ angular.module('ionicApp', ['ionic'])
         }
       }
     })
+    .state('eventmenu.image-slider', {
+      url: "/image-slider",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/image-slider.html"
+        }
+      }
+    })
   
   $urlRouterProvider.otherwise("/event/profile");
 })
@@ -102,15 +110,10 @@ angular.module('ionicApp', ['ionic'])
 })
 
 .controller('AppCtrl', function($scope, $ionicModal) {
-  $scope.contacts = [
-    { name: 'Gordon Freeman' },
-    { name: 'Barney Calhoun' },
-    { name: 'Lamarr the Headcrab' },
-  ];
-  $ionicModal.fromTemplateUrl('templates/modal.html', function(modal) {
+  $ionicModal.fromTemplateUrl('templates/modal-window.html', function(modal) {
     $scope.modal = modal;
   }, {
-    animation: 'slide-in-up',
+    animation: 'slide-in-up twitter',
     focusFirstInput: true
   });
 })
@@ -122,5 +125,33 @@ angular.module('ionicApp', ['ionic'])
     $scope.modal.hide();
   };
   
-});
+})
 
+.controller('MyCtrl', function($scope) {
+
+  
+  $scope.itemButtons = [
+    {
+      text: '',
+      type: 'button-positive check',
+      onTap: function() {
+        
+      }
+    },
+    {
+      text: '',
+      type: 'button-positive message',
+      onTap: function() {
+        
+      }
+    },
+    {
+      text: '',
+      type: 'button-positive close',
+      onTap: function() {
+        
+      }
+    }
+  ];
+  
+});

@@ -1,101 +1,148 @@
+
 <ion-header-bar align-title="center" class="bar-positive">
-  <div class="buttons">
-      <button class="button backbutton" ng-click="doSomething()">Back</button>
-  </div>
-  <h1 class="title">Lists</h1>
-  <div class="buttons">
-      <button class="button rightbutton"><i class="icon ion-ios7-plus-empty"></i></button>
-  </div>
+    <div class="buttons">
+        <button class="button backbutton" ng-click="doSomething()">Back</button>
+    </div>
+    <h1 class="title">Lists</h1>
+    <div class="buttons">
+        <button class="button rightbutton"><i class="icon ion-ios7-plus-empty"></i></button>
+    </div>
 </ion-header-bar>
 
-<ion-view>
-    <ion-content has-header="true">
+<ion-content  has-header="true">
         <div id="lists" class="content">
-            
-            <div class="list">
-                <a class="item item-thumbnail-left" href="#">
-                    <span class="photo-box-circle">
-                        <span class="photo-box-circle-small-top-left">4</span>
-                    </span>
-                    <h2>Fredrick Luckily</h2>
-                    <span class="designer">Designer</span>
-                    <span class="home">London, United Kingdom</span>
-                </a>
-                <a class="item item-thumbnail-left" href="#">
-                    <span class="photo-box-circle">
-                        <span class="photo-box-circle-small-bottom-right">
-                            <span class="orange"></span>
-                        </span>
-                    </span>
-                    <h2>Fredrick Luckily</h2>
-                    <span class="developer">Developer</span>
-                    <span class="home">New York, USA</span>
-                </a>
-                <a class="item item-thumbnail-left" href="#">
-                    <span class="photo-box-circle">
-                        <span class="photo-box-circle-small-bottom-right">
-                            <span class="green"></span>
-                        </span>
-                    </span>
-                    <h2>Fredrick Luckily</h2>
-                    <span class="student">Student</span>
-                    <span class="home">New Orleans, LA</span>
-                </a>
-                <a class="item item-thumbnail-left" href="#">
-                    <span class="photo-box-circle">
-                        <span class="photo-box-circle-small-top-left">4</span>
-                        <span class="photo-box-circle-small-bottom-right">
-                            <span class="grey"></span>
-                        </span>
-                    </span>
-                    <h2>Fredrick Luckily</h2>
-                    <span class="student">Student</span>
-                    <span class="home">New Orleans, LA</span>
-                </a>
-                <div class="options">
-                    <ul>
-                        <li class="check"></li>
-                        <li class="message"></li>
-                        <li class="close"></li>
-                        <li class="options-circle">
-                            <span class="photo-box-circle">
-                                <span class="photo-box-circle-small-bottom-right">
-                                    <span class="green"></span>
-                                </span>
-                            </span> 
-                        </li>
-                    </ul>
-                </div>
-                <a class="item item-thumbnail-left" href="#">
-                    <span class="photo-box-circle">
-                        <span class="photo-box-circle-small-top-left">3</span>
-                        <span class="photo-box-circle-small-bottom-right">
-                            <span class="grey"></span>
-                        </span>
-                    </span>
-                    <h2>Fredrick Luckily</h2>
-                    <span class="student">Student</span>
-                    <span class="home">New Orleans, LA</span>
-                </a>
-                <a class="item item-thumbnail-left" href="#">
-                    <span class="photo-box-circle">
-                    </span>
-                    <h2>Fredrick Luckily</h2>
-                    <span class="student">Student</span>
-                    <span class="home">New Orleans, LA</span>
-                </a>
-                <a class="item item-thumbnail-left" href="#">
-                    <span class="photo-box-circle">
-                        <span class="photo-box-circle-small-bottom-right">
-                            <span class="green"></span>
-                        </span>
-                    </span>
-                    <h2>Fredrick Luckily</h2>
-                    <span class="student">Student</span>
-                    <span class="home">New Orleans, LA</span>
-                </a>
 
-            </div>
+    <ion-list option-buttons="itemButtons">
+
+        <!--<div class="list">-->
+        <ion-item item-type="item-avatar">
+                <span class="photo-box-circle">
+                    <span class="photo-box-circle-small-top-left">4</span>
+                </span>
+                <h2>Fredrick Luckily</h2>
+                <span class="category">Category</span>
+                <span class="stars">
+                    <i class="icon ion-ios7-star"></i>
+                    <i class="icon ion-ios7-star"></i>
+                    <i class="icon ion-ios7-star"></i>
+                    <i class="icon ion-ios7-star"></i>
+                    <i class="icon ion-ios7-star"></i>
+                </span>
+        </ion-item>
+        <ion-item item-type="item-avatar">
+                <span class="photo-box-circle">
+                    <span class="photo-box-circle-small-bottom-right">
+                        <span class="orange"></span>
+                    </span>
+                </span>
+                <h2>Fredrick Luckily</h2>
+                <span class="category">Category</span>
+                <span class="stars">
+                    <i class="icon ion-ios7-star"></i>
+                    <i class="icon ion-ios7-star"></i>
+                    <i class="icon ion-ios7-star"></i>
+                    <i class="icon ion-ios7-star"></i>
+                    <i class="icon ion-ios7-star"></i>
+                </span>
+        </ion-item>
+        <ion-item item-type="item-avatar">
+                <span class="photo-box-circle">
+                    <span class="photo-box-circle-small-bottom-right">
+                        <span class="green"></span>
+                    </span>
+                </span>
+                <h2>Fredrick Luckily</h2>
+                <span class="category">Category</span>
+                <span class="stars">
+                    <i class="icon ion-ios7-star"></i>
+                    <i class="icon ion-ios7-star"></i>
+                    <i class="icon ion-ios7-star"></i>
+                    <i class="icon ion-ios7-star"></i>
+                    <i class="icon ion-ios7-star"></i>
+                </span>
+        </ion-item>
+        <ion-item item-type="item-avatar">
+                <span class="photo-box-circle">
+                    <span class="photo-box-circle-small-top-left">4</span>
+                    <span class="photo-box-circle-small-bottom-right">
+                        <span class="grey"></span>
+                    </span>
+                </span>
+                <h2>Fredrick Luckily</h2>
+                <span class="category">Category</span>
+                <span class="stars">
+                    <i class="icon ion-ios7-star"></i>
+                    <i class="icon ion-ios7-star"></i>
+                    <i class="icon ion-ios7-star"></i>
+                    <i class="icon ion-ios7-star"></i>
+                    <i class="icon ion-ios7-star"></i>
+                </span>
+        </ion-item>
+        <ion-item item-type="item-avatar">
+                <span class="photo-box-circle">
+                    <span class="photo-box-circle-small-bottom-right">
+                        <span class="green"></span>
+                    </span>
+                </span> 
+                <h2>Fredrick Luckily</h2>
+                <span class="category">Category</span>
+                <span class="stars">
+                    <i class="icon ion-ios7-star"></i>
+                    <i class="icon ion-ios7-star"></i>
+                    <i class="icon ion-ios7-star"></i>
+                    <i class="icon ion-ios7-star"></i>
+                    <i class="icon ion-ios7-star"></i>
+                </span>
+        </ion-item>
+        <ion-item item-type="item-avatar">
+                <span class="photo-box-circle">
+                    <span class="photo-box-circle-small-top-left">3</span>
+                    <span class="photo-box-circle-small-bottom-right">
+                        <span class="grey"></span>
+                    </span>
+                </span>
+                <h2>Fredrick Luckily</h2>
+                <span class="category">Category</span>
+                <span class="stars">
+                    <i class="icon ion-ios7-star"></i>
+                    <i class="icon ion-ios7-star"></i>
+                    <i class="icon ion-ios7-star"></i>
+                    <i class="icon ion-ios7-star"></i>
+                    <i class="icon ion-ios7-star"></i>
+                </span>
+        </ion-item>
+        <ion-item item-type="item-avatar">
+                <span class="photo-box-circle">
+                </span>
+                <h2>Fredrick Luckily</h2>
+                <span class="category">Category</span>
+                <span class="stars">
+                    <i class="icon ion-ios7-star"></i>
+                    <i class="icon ion-ios7-star"></i>
+                    <i class="icon ion-ios7-star"></i>
+                    <i class="icon ion-ios7-star"></i>
+                    <i class="icon ion-ios7-star"></i>
+                </span>
+        </ion-item>
+        <ion-item item-type="item-avatar">
+                <span class="photo-box-circle">
+                    <span class="photo-box-circle-small-bottom-right">
+                        <span class="green"></span>
+                    </span>
+                </span>
+                <h2>Fredrick Luckily</h2>
+                <span class="category">Category</span>
+                <span class="stars">
+                    <i class="icon ion-ios7-star"></i>
+                    <i class="icon ion-ios7-star"></i>
+                    <i class="icon ion-ios7-star"></i>
+                    <i class="icon ion-ios7-star"></i>
+                    <i class="icon ion-ios7-star"></i>
+                </span>
+        </ion-item>
+
+        <!--</div>-->
+
+    </ion-list>
         </div>
-    </ion-content>
-</ion-view>
+</ion-content>
