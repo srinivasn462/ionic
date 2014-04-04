@@ -58,6 +58,7 @@ span.green{
 .bar.bar-positive{
     background: #3f9dd9;
     border: none;
+    height: 64px;
 }
 .button.side-menu{
     margin: 10px;
@@ -991,6 +992,97 @@ color: #3f9dd9;
 }
 #community .collection-item .bottom-block span.comments{
     margin-left: 5px;
+}
+#swipe-menu-drag{
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    top: -5%;
+    left: 0;
+    z-index: 9999999999;
+}
+#swipe-menu{
+    position: fixed;
+    top: -100%;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 60%;
+    background: transparent;
+    opacity: .9;
+    box-sizing: border-box;
+    -webkit-transition: all 0s ease-in-out;
+    -moz-transition: all 0s ease-in-out;
+    -o-transition: all 0s ease-in-out;
+    transition: all 0s ease-in-out;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#swipe-menu .swipe-menu-color{
+    background-color: #fff;
+    opacity: 0.8;
+    height: 100%;
+}
+#swipe-menu .swipe-menu-bg{
+    background: url('../images/bg-dropdown.png');
+    -webkit-filter: blur(10px);  
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);    
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#swipe-menu.moving{
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+#swipe-menu a.item{
+    background: transparent;
+    width: 85%;
+    margin: 0 auto;
+    border-left: none;
+    border-right: none;
+    height: 13%;
+    font-size: 24px;
+    line-height: 52px;
+    padding-left: 50px;
+}
+#swipe-menu a.item.active{
+    background: #3f9dd9;
+}
+#swipe-menu a.item:after{
+    color: #3f9dd9;
+    border-radius: 100%;
+    border: 2px solid #3f9dd9;
+    width: 25px;
+    text-align: center;
+    padding-left: 8px;
+    height: 25px;
+    margin-top: 7%;
+}
+#swipe-menu a.item.active:after{
+    color: #3f9dd9;
+    background-color: #fff;
+    border-radius: 100%;
+    border: 2px solid #fff;
+    width: 25px;
+    text-align: center;
+    padding-left: 8px;
+    height: 25px;
+    margin-top: 7%;
+}
+#swipe-menu .buttons button.icon.ion-ios7-close-empty:before{
+    font-size: 50px;
 }
 .modal.twitter{
     position: relative;

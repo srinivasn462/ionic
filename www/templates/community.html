@@ -1,6 +1,47 @@
+<div class="list top-slide-menu" id="swipe-menu" habra-habr="word">
+        <!--<span habra-habr="word" habra="Nehabra"></span>-->
+        <div class="swipe-menu-bg"></div>
+        <div id="swipe-menu-drag"></div>
+        <div class="swipe-menu-color">
+        <a class="item item-icon-left" href="#">
+            <i class="icon ion-ios7-person-outline"></i>
+            Account
+        </a>
+        <a class="item item-icon-left" href="#">
+            <i class="icon ion-ios7-heart-outline"></i>
+            Favourites
+        </a>
+        <a class="item item-icon-left" href="#">
+            <i class="icon ion-paper-airplane"></i>
+            Messages
+            <span class="badge badge-positive">13</span>
+        </a>
+        <a class="item item-icon-left" href="#">
+            <i class="icon ion-levels"></i>
+            Account Settings
+        </a>
+        <a class="item item-icon-left active" href="#">
+            <i class="icon ion-pie-graph"></i>
+            Usage
+        </a>
+        <a class="item item-icon-left" href="#">
+            <i class="icon ion-ios7-refresh-empty"></i>
+            Updates
+        </a>
+        </div>
+        <ion-footer-bar align-title="center" class="bar-positive">
+            <div class="buttons">
+                  <button class="button button-icon icon ion-ios7-close-empty" style="margin-top: 10px;"></button>
+              </div>
+              <h1 class="title">Friends</h1>
+              <div class="buttons">
+                  <button class="button rightbutton"><i class="icon ion-ios7-search"></i></button>
+              </div>    
+        </ion-footer-bar>
+    </div> 
 <ion-header-bar align-title="center" class="bar-positive">
   <div class="buttons">
-      <button class="button backbutton" ng-click="doSomething()">Back</button>
+      <button class="button backbutton" ng-click="swipeMenu()">Back</button>
   </div>
   <h1 class="title">Recent Posts</h1>
   <div class="buttons">
@@ -16,27 +57,6 @@
 </div>
 
 <ion-view>
-    
-    <div class="list top-slide-menu" id="top-menu">
-        <a class="item item-icon-left" href="#">
-            <i class="icon ion-record" style="color: #3f9dd9"></i>
-            Profile
-        </a>
-        <a class="item item-icon-left item-icon-right" href="#">
-            <i class="icon ion-arrow-graph-up-right"></i>
-            Notifications
-            <span class="badge badge-positive">0</span>
-        </a>
-        <a class="item item-icon-left" href="#">
-            <i class="icon ion-ios7-cloud-upload-outline"></i>
-            Upload New
-        </a>
-        <a class="item item-icon-left active" href="#">
-            <i class="icon ion-image"></i>
-            Photos
-        </a>
-    </div>
-    
     <ion-content has-header="true" class="bg-light-grey bottom-none">
         <div id="community" class="content">
             <div class="left-col">
@@ -46,6 +66,7 @@
                     </div>
                     <div class="bottom-block">
                         <h4>Lorem ipsum dolor sit</h4>
+                         
                         <h5><a href="http://pinterest.com">pinterest.com</a></h5>
                         <span class="heart"><i class="icon ion-heart"></i>33</span>
                         <span class="comments"><i class="icon ion-ios7-chatbubble"></i>7</span>
