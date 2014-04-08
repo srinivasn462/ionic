@@ -5,7 +5,7 @@
 
         <ion-header-bar align-title="center" class="bar-positive">
             <div class="buttons">
-                <button class="button backbutton" ng-click="toggleLeft()">Back</button>
+                <a href="#/login"><button class="button backbutton" >Back</button></a>
             </div>
             <h1 class="title">Friends</h1>
             <div class="buttons">
@@ -20,7 +20,8 @@
                         <div class="photo-box-absolute">
                             <a class="item item-avatar" href="#">
                                 <span class="photo-box-circle"><span class="photo-box-circle-small-top-left">3</span></span>
-                                <h2>Someonews Name<i class="icon ion-ios7-arrow-down" style="padding: 4px 0 0 5px"></i></h2>
+                                <h2 class="name">Someonews Name</h2>
+                                <!--<span class="arrow-down"></span>-->
                                 <p>@johnathonrockfish</p>
                             </a>
                         </div>
@@ -33,7 +34,7 @@
                                 tab-content1
                             </div>
                         </li>
-                        <li>
+                        <li style="width:22%">
                             <input type="radio" name="tabs" id="tab2" checked="checked">
                             <label for="tab2">Friends</label>
                             <div id="tab-content2" class="tab-content animated fadeIn">
@@ -60,7 +61,7 @@
                         <input type="text" placeholder="Find friends">
                     </label>
                     <div class="list">
-                        <a class="item item-thumbnail-left" href="#">
+                        <a class="item item-thumbnail-left" href="#/profile-1">
                             <span class="photo-box-circle">
                                 <span class="photo-box-circle-small-bottom-right">
                                     <span class="orange"></span>
@@ -70,7 +71,7 @@
                             <span class="developer">Developer</span>
                             <span class="home">New York, USA</span>
                         </a>
-                        <a class="item item-thumbnail-left" href="#">
+                        <a class="item item-thumbnail-left" href="#/profile-1">
                             <span class="photo-box-circle">
                                 <span class="photo-box-circle-small-bottom-right">
                                     <span class="grey"></span>
@@ -84,7 +85,7 @@
                         <div class="options">
                             <ul>
                                 <li class="tel"></li>
-                                <li class="chat"></li>
+                                <a href="#/chat"><li class="chat"></li></a>
                                 <li class="email"></li>
                                 <li class="options-circle">
                                     <span class="photo-box-circle">
@@ -95,7 +96,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <a class="item item-thumbnail-left" href="#">
+                        <a class="item item-thumbnail-left" href="#/profile-1">
                             <span class="photo-box-circle">
                                 <span class="photo-box-circle-small-bottom-right">
                                     <span class="green"></span>

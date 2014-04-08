@@ -66,13 +66,13 @@ span.green{
 div.buttons .button.side-menu:before{
     font-size: 40px;
 }
-.bar .buttons>.button.backbutton {
+.bar .buttons a>.button.backbutton {
     line-height: 24px;
     border: none;
     width: 75px;
     border-radius: 5px;
     position: relative;
-    margin-left: 15px;
+    margin-left: 5px;
     margin-top: 10px;
     min-height: 45px;
     background: url('../images/back-recktangle.png') no-repeat;
@@ -81,7 +81,7 @@ div.buttons .button.side-menu:before{
     padding-left: 20px;
     padding-bottom: 5px;
 }
-.bar .buttons>.button.backbutton-blue {
+.bar .buttons a>.button.backbutton-blue {
     line-height: 24px;
     border: none;
     width: 75px;
@@ -188,6 +188,9 @@ div.buttons .button.side-menu:before{
 }
 #login .item-input input::-moz-placeholder{
     color: #fff;
+}
+#login div.list a{
+    text-decoration: none;
 }
 #login div.list .button {
     width: 90%;
@@ -359,8 +362,20 @@ color: #3f9dd9;
 /* End Login-white page*/
 
 /* Profile page*/
+#profile .item h2.name{
+    position: relative;
+}
+#profile .item h2.name:after{
+    content: '';
+    position: absolute;
+    background: url('../images/arrow-down-grey.png') no-repeat;
+    width: 18px;
+    height: 18px;
+    top: 5px;
+    right: 0;
+}
 #profile .photo{
-    height: 30%;
+    height: 90px;
     position: relative;
     background: #bdc3c7;
 }
@@ -376,7 +391,7 @@ color: #3f9dd9;
 }
 #profile .item-avatar h2{
     color: #fff;
-    font-size: 25px;
+    font-size: 23px;
     margin-top: 5px;
 }
 #profile .item-avatar p{
@@ -389,7 +404,7 @@ color: #3f9dd9;
     display: block;
     background: #fff;
     float: left;
-    margin-left: -42px;
+    margin-left: -55px;
     border-radius: 100%;
     margin-right: 20px;
     background: #3f9dd9;
@@ -414,12 +429,17 @@ color: #3f9dd9;
 #profile .photo-box-absolute a.item:after{
     position: absolute;
     top: 30px;
-    right: 14px;
-    height: 31px;
-    width: 31px;
+    right: 4px;
+    height: 25px;
+    width: 25px;
     color: #fff;
-    content: "\f1ca";
-    font-size: 35px;
+    content: "+";
+    font-size: 25px;
+    border-radius: 100%;
+    border: 2px solid #fff;
+    text-align: center;
+    padding-left: 3px;
+    padding-bottom: 4px;
 }
 #profile .list>label{
     border-radius: 10px;
@@ -454,17 +474,14 @@ color: #3f9dd9;
     color: #9d9fa1;
 }
 #profile div.list a.item:after{
-    content: "\f154";
-    color: #3f9dd9;
+    content: "";
     width: 30px;
     height: 30px;
-    border: 2px solid #3f9dd9;
-    border-radius: 100%;
-    padding-left: 10px;
-    padding-top: 2px;
-    font-size: 22px;
-    font-weight: bold;
+    font-size: 20px;
     top: 35%;
+    background: url('../images/btn-fw.png');
+    background-size: contain;
+    right: 5px;
 } 
 #profile div.list h2{
     font-size: 24px;
@@ -514,6 +531,7 @@ color: #3f9dd9;
     min-height: 80px;
     margin: 0 -1px;
     border-top: none;
+    padding-left: 95px;
 }
 #profile div.list .options, #lists div.list .options{
     width: 100%;
@@ -571,6 +589,8 @@ color: #3f9dd9;
     list-style: none;
     position: relative;
     padding: 0;
+    width: 103%;
+    left: 0%;
 }
 .tabss li{
     float: left;
@@ -579,7 +599,7 @@ color: #3f9dd9;
 .tabss label {
     display: block;
     padding: 20px 0px;
-    font-size: 18px;
+    font-size: 16px;
     color: #9d9fa1;
     text-align: center;
     font-weight: normal;
@@ -591,6 +611,7 @@ color: #3f9dd9;
     -moz-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
+    white-space: nowrap;
 }
 
 [id^=tab]:checked + label {
@@ -970,7 +991,7 @@ color: #3f9dd9;
     background: #ccc;
 }
 #community .collection-item .bottom-block{
-    max-height: 85px;
+    min-height: 85px;
     font-size: 16px;
     padding: 10px;
 }
@@ -1052,10 +1073,15 @@ color: #3f9dd9;
     margin: 0 auto;
     border-left: none;
     border-right: none;
-    height: 13%;
-    font-size: 24px;
-    line-height: 52px;
+    height: 12%;
+    font-size: 120%;
+    line-height: 100%;
     padding-left: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#swipe-menu a.item i{
+    font-size: 130%;
 }
 #swipe-menu a.item.active{
     background: #3f9dd9;
@@ -1068,7 +1094,7 @@ color: #3f9dd9;
     text-align: center;
     padding-left: 8px;
     height: 25px;
-    margin-top: 7%;
+    margin-top: 3px;
 }
 #swipe-menu a.item.active:after{
     color: #3f9dd9;
@@ -1079,7 +1105,7 @@ color: #3f9dd9;
     text-align: center;
     padding-left: 8px;
     height: 25px;
-    margin-top: 7%;
+    margin-top: 3px;
 }
 #swipe-menu .buttons button.icon.ion-ios7-close-empty:before{
     font-size: 50px;
