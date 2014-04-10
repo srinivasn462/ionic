@@ -18,7 +18,8 @@ $stateProvider
     })
     .state('profile-1', {
         url: "/profile-1",
-        templateUrl: "templates/profile-1.html"
+        templateUrl: "templates/profile-1.html",
+        controller: "MainCtrl"
     })
     .state('settings', {
         url: "/settings",
@@ -26,7 +27,8 @@ $stateProvider
     })
     .state('lists', {
         url: "/lists",
-        templateUrl: "templates/lists.html"
+        templateUrl: "templates/lists.html",
+        controller: "MyCtrl"
     })
     .state('tags', {
         url: "/tags",
@@ -38,12 +40,13 @@ $stateProvider
     })
     .state('community', {
         url: "/community",
-        templateUrl: "templates/community.html"
-    //          controller: "SwipeController"
+        templateUrl: "templates/community.html",
+        controller: "AppCtrl"
     })
     .state('chat', {
         url: "/chat",
-        templateUrl: "templates/chat.html"
+        templateUrl: "templates/chat.html",
+        controller: "MainCtrl"
     })
     .state('image-slider', {
         url: "/image-slider",
@@ -78,9 +81,12 @@ $stateProvider
 
         })
 
-        .controller('MyCtrl', function($scope) {
+        .controller('MyCtrl', function($scope, $ionicSideMenuDelegate) {
 
-
+            $scope.toggleLeft = function() {
+                $ionicSideMenuDelegate.toggleLeft();
+            };
+            
             $scope.itemButtons = [
                 {
                     text: '',
@@ -169,174 +175,5 @@ $stateProvider
                             break;
                     }
                 }
-
-
-
-
-
-
-                /*Задаем функцию, которая будет вызываться при изменении переменной word, ее имя находится в attrs.habraHabr*/
-//            $scope.$watch(attrs.habraHabr,function(value){
-//                element.text(value+attrs.habra);
-//            });
             }
         });
-
-//.directive('SwipeCtrl', function($scope) {
-//
-//  
-//  $scope.swipeMenu = (function(){
-//        
-//        return function (page){
-//            var panel_drag = document.querySelector(page+' #top-menu'),
-//                panel = document.querySelector(page+' [data-role="swipe-menu"]'),
-//                current_pos = -100;
-////                console.log(Hammer);
-//            Hammer(panel_drag).on("release dragdown dragup swipedown swipeup", handleHammer);
-//            
-//            $(page+" .fullwidth-table").ham("swipedown", handleHammer);
-//            PrefixedEvent(panel, "TransitionEnd", function(){
-//                current_pos = parseInt(panel.style.top);
-//                $(panel).removeClass("moving");
-//            });
-//
-//            function handleHammer(ev){
-//                console.log(ev)
-//                var body = document.querySelector("body");
-//                ev.gesture.preventDefault();
-//                switch(ev.type){
-//                    case 'dragup':
-//                    case 'dragdown':
-//                        if((ev.gesture.direction === "down" && current_pos < 0) || (ev.gesture.direction === "up" && current_pos >-100) )
-//                            panel.style.top = current_pos + Math.ceil(ev.gesture.deltaY/panel.offsetHeight * 100)+"%";
-//                        body.style.overflow = "hidden";
-//                        break;
-//                    case 'swipedown':
-//                        console.log("Swipedown");
-//                        console.log(current_pos);
-//                        ev.gesture.stopDetect();
-//                        $(panel).addClass("moving");
-//                        panel.style.top = 0+"%";
-//                        current_pos = 0;
-//                        body.style.overflow = "hidden";
-//                        break;
-//                    case 'swipeup':
-//                        ev.gesture.stopDetect();
-//                        $(panel).addClass("moving");
-//                        panel.style.top = -100+"%";
-//                        current_pos = -100;
-//                        body.style.overflow = "visible";
-//                        break;
-//                    case 'release':
-//                        $(panel).addClass("moving");
-//                        current_pos = current_pos + Math.ceil(ev.gesture.deltaY/panel.offsetHeight * 100);
-//                        if(current_pos<=-50){
-//                            panel.style.top = -100+"%";
-//                            current_pos = -100;
-//                        }else{
-//                            panel.style.top = 0+"%";
-//                            current_pos = 0;
-//                            $("body").css("overflow","visible");
-//                        }
-//                        break;
-//                }
-//
-//
-////                function fixPaneRefresh() {
-////                        var top = window.pageYOffset || document.documentElement.scrollTop;
-////                        console.log(top);
-////                            $('body').css("top", "-"+top+"px"); 
-////                }
-//
-//
-//                if(panel.style.bottom === "0%"){
-//                      document.getElementById('notes').addEventListener('touchmove', function(e) {
-//                      e.preventDefault();
-//                }, false);
-//                }
-//                else{
-//                    $("body").css({"position" : "relative", "overflow" : "visible"});
-//                    console.log("2222222");
-//                    console.log($("body").css("overflow"))
-//                }
-//            }
-//        };
-//        
-//    }());
-//  
-//});
-/*
- .controller('SwipeController', '$scope', function($scope) {
- 
- $scope.swipeMenu = function() {
- return function (){
- console.log("11111111111")
- //            var panel_drag = document.querySelector(' #top-menu'),
- //                panel = document.querySelector(' #swipe-menu'),
- //                current_pos = -100;
- ////                console.log(Hammer);
- //            Hammer(panel_drag).on("release dragdown dragup swipedown swipeup", handleHammer);
- //            
- //            $(" .fullwidth-table").ham("swipedown", handleHammer);
- //            PrefixedEvent(panel, "TransitionEnd", function(){
- //                current_pos = parseInt(panel.style.top);
- //                $(panel).removeClass("moving");
- //            });
- //
- //            function handleHammer(ev){
- //                console.log(ev)
- //                var body = document.querySelector("body");
- //                ev.gesture.preventDefault();
- //                switch(ev.type){
- //                    case 'dragup':
- //                    case 'dragdown':
- //                        if((ev.gesture.direction === "down" && current_pos < 0) || (ev.gesture.direction === "up" && current_pos >-100) )
- //                            panel.style.top = current_pos + Math.ceil(ev.gesture.deltaY/panel.offsetHeight * 100)+"%";
- //                        body.style.overflow = "hidden";
- //                        break;
- //                    case 'swipedown':
- //                        console.log("Swipedown");
- //                        console.log(current_pos);
- //                        ev.gesture.stopDetect();
- //                        $(panel).addClass("moving");
- //                        panel.style.top = 0+"%";
- //                        current_pos = 0;
- //                        body.style.overflow = "hidden";
- //                        break;
- //                    case 'swipeup':
- //                        ev.gesture.stopDetect();
- //                        $(panel).addClass("moving");
- //                        panel.style.top = -100+"%";
- //                        current_pos = -100;
- //                        body.style.overflow = "visible";
- //                        break;
- //                    case 'release':
- //                        $(panel).addClass("moving");
- //                        current_pos = current_pos + Math.ceil(ev.gesture.deltaY/panel.offsetHeight * 100);
- //                        if(current_pos<=-50){
- //                            panel.style.top = -100+"%";
- //                            current_pos = -100;
- //                        }else{
- //                            panel.style.top = 0+"%";
- //                            current_pos = 0;
- //                            $("body").css("overflow","visible");
- //                        }
- //                        break;
- //                }
- //
- //
- //                if(panel.style.bottom === "0%"){
- //                      document.getElementById('notes').addEventListener('touchmove', function(e) {
- //                      e.preventDefault();
- //                }, false);
- //                }
- //                else{
- //                    $("body").css({"position" : "relative", "overflow" : "visible"});
- //                    console.log("2222222");
- //                    console.log($("body").css("overflow"))
- //                }
- //            }
- };
- };
- }); */
-//}]);

@@ -1,39 +1,92 @@
-<ion-header-bar align-title="center" class="bar-positive">
-  <div class="buttons">
-      <a href="#/profile"><button class="button backbutton">Back</button></a>
-  </div>
-  <h1 class="title">Thomas Erikson</h1>
-  <div class="buttons">
-      <button class="button rightbutton edit-button">Edit</button>
-  </div>
-</ion-header-bar>
+<ion-side-menus>
+    <ion-side-menu-content>
+        <ion-header-bar align-title="center" class="bar-positive">
+            <div class="buttons">
+                <button class="button button-icon icon ion-navicon side-menu" ng-click="toggleLeft()"></button>
+            </div>
+            <h1 class="title">Thomas Erikson</h1>
+            <div class="buttons">
+                <button class="button rightbutton edit-button">Edit</button>
+            </div>
+        </ion-header-bar>
 
-<ion-view>
-    <ion-content has-header="true">
-        <div id="chat" class="content">
-            <div class="message left">Lorem ipsum dolor sit amet, consectetur adipisc ing elit. Mauris id hendrer it enim.</div>
-            <div class="message right">Hello, Are you there yet?</div>
-            <div class="message right">Lorem ipsum dolor sit amet, consectetur adipisc ing elit. Mauris id hendrer it enim bibendum mauris.</div>
-            <div class="message left">Great, that will work...</div>
-            <div class="message left">Lorem ipsum dolor sit amet, consectetur adipisc ing elit. Mauris id hendrer it enim.</div>
-            <div class="message right">Hello, Are you there yet?</div>
-            <div class="message right">Lorem ipsum dolor sit amet, consectetur adipisc ing elit. Mauris id hendrer it enim bibendum mauris.</div>
-            <div class="message left">Great, that will work...</div>
-            <div class="message left">Lorem ipsum dolor sit amet, consectetur adipisc ing elit. Mauris id hendrer it enim.</div>
-            <div class="message right">Hello, Are you there yet?</div>
-            <div class="message right">Lorem ipsum dolor sit amet, consectetur adipisc ing elit. Mauris id hendrer it enim bibendum mauris.</div>
-            <div class="message left">Great, that will work...</div>
-        </div>
-    </ion-content>
-    <ion-footer-bar align-title="left" class="chat-footer">
-        <div class="item item-input-inset imessage">
-            <i class="icon ion-camera"></i>
-            <label class="item-input-wrapper">
-                <input type="text" placeholder="iMessage">
+        <ion-view>
+            <ion-content has-header="true">
+                <div id="chat" class="content">
+                    <div class="message left">Lorem ipsum dolor sit amet, consectetur adipisc ing elit. Mauris id hendrer it enim.</div>
+                    <div class="message right">Hello, Are you there yet?</div>
+                    <div class="message right">Lorem ipsum dolor sit amet, consectetur adipisc ing elit. Mauris id hendrer it enim bibendum mauris.</div>
+                    <div class="message left">Great, that will work...</div>
+                    <div class="message left">Lorem ipsum dolor sit amet, consectetur adipisc ing elit. Mauris id hendrer it enim.</div>
+                    <div class="message right">Hello, Are you there yet?</div>
+                    <div class="message right">Lorem ipsum dolor sit amet, consectetur adipisc ing elit. Mauris id hendrer it enim bibendum mauris.</div>
+                    <div class="message left">Great, that will work...</div>
+                    <div class="message left">Lorem ipsum dolor sit amet, consectetur adipisc ing elit. Mauris id hendrer it enim.</div>
+                    <div class="message right">Hello, Are you there yet?</div>
+                    <div class="message right">Lorem ipsum dolor sit amet, consectetur adipisc ing elit. Mauris id hendrer it enim bibendum mauris.</div>
+                    <div class="message left">Great, that will work...</div>
+                </div>
+            </ion-content>
+            <ion-footer-bar align-title="left" class="chat-footer">
+                <div class="item item-input-inset imessage">
+                    <i class="icon ion-camera"></i>
+                    <label class="item-input-wrapper">
+                        <input type="text" placeholder="iMessage">
+                    </label>
+                    <button class="button button-small">
+                        Send
+                    </button>
+                </div>
+            </ion-footer-bar>
+        </ion-view>
+    </ion-side-menu-content>
+    <ion-side-menu width="250" side="left">
+        <ion-header-bar class="bar-light">
+            <label class="item item-input" style="width: 95%; height: 50px; margin: 0 auto;">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text" placeholder="Search" style="line-height: 20px;font-size: 18px;">
             </label>
-            <button class="button button-small">
-                Send
-            </button>
-        </div>
-    </ion-footer-bar>
-</ion-view>
+        </ion-header-bar>
+        <ion-content class="side-menu">
+            <div class="list" id="side-menu">
+                <a class="item item-icon-left" href="#">
+                    <i class="icon ion-record" style="color: #3f9dd9"></i>
+                    Profile
+                </a>
+                <a class="item item-icon-left item-icon-right" href="#">
+                    <i class="icon ion-arrow-graph-up-right"></i>
+                    Notifications
+                    <span class="badge badge-positive">0</span>
+                </a>
+                <a class="item item-icon-left" href="#">
+                    <i class="icon ion-ios7-cloud-upload-outline"></i>
+                    Upload New
+                </a>
+                <a class="item item-icon-left active" href="#">
+                    <i class="icon ion-image"></i>
+                    Photos
+                </a>
+                <a class="item item-icon-left" href="#">
+                    <i class="icon ion-eye"></i>
+                    Explore
+                </a>
+                <a class="item item-icon-left" href="#">
+                    <i class="icon ion-person-stalker"></i>
+                    Designers
+                </a>
+                <a class="item item-icon-left" href="#">
+                    <i class="icon ion-ios7-calendar-outline"></i>
+                    Calendar
+                </a>
+                <a class="item item-icon-left" href="#">
+                    <i class="icon ion-ios7-heart-outline"></i>
+                    Favorites
+                </a>
+                <a class="item item-icon-left" href="#" style="margin: 20px 0">
+                    <i class="icon ion-log-out"></i>
+                    Sign Out
+                </a>
+            </div>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>
